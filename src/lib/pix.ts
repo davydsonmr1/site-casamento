@@ -3,6 +3,6 @@
 // visitante consegue lê-la no devtools. A defesa real é a validação do banco
 // no momento do PIX (nome do destinatário, conta, etc.). Mantemos a chave
 // centralizada aqui para facilitar troca.
-export const PIX_KEY = "anderson.juliana@exemplo.com";
-export const PIX_RECIPIENT = "Anderson & Juliana";
-export const PIX_CITY = "SAO PAULO";
+export const PIX_KEY = "davydsonmr1@gmail.com";
+export const PIX_RECIPIENT = "Davydson & Júlia";
+export const PIX_CITY = "MG";

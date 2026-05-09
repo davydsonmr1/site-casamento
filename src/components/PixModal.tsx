@@ -127,6 +127,20 @@ export function PixModal({ gift, onClose }: Props) {
               </p>
             </div>
 
+            {gift.purchaseLink && (
+              <p className="mt-5 text-center text-xs leading-relaxed text-white/70">
+                Caso queira comprar diretamente, aqui está o link:{" "}
+                <a
+                  href={gift.purchaseLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-white underline underline-offset-4 transition hover:text-white/80"
+                >
+                  abrir produto
+                </a>
+              </p>
+            )}
+
             <div className="mt-6 flex items-center justify-center gap-2 text-[11px] text-white/50">
               <ShieldCheck size={14} />
               <span>Pagamento direto aos noivos</span>
