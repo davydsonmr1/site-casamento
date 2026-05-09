@@ -14,9 +14,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Anderson & Juliana — 21.11.2026",
+  title: "Davydson & Júlia — 11.07.2026",
   description:
-    "Casamento de Anderson & Juliana — São Paulo, 21 de Novembro de 2026.",
+    "Casamento de Davydson & Júlia — Itamarati, 11 de Julho de 2026.",
   robots: { index: true, follow: false },
 };
 
