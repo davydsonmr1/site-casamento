@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
@@ -35,22 +36,20 @@ export function CinematicHero() {
           style={{ scale, transformOrigin: `${RING_X} ${RING_Y}` }}
           className="absolute inset-0 z-0 will-change-transform"
         >
-          {/* Fallback caso /fundo.jpeg some, mantém clima cinematográfico. */}
+          <Image
+            src="/fundo.jpeg"
+            alt="Aliança"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+            style={{ objectPosition: `${RING_X} ${RING_Y}` }}
+          />
+          {/* Vinheta para legibilidade do texto sem queimar o centro da foto. */}
           <div
             aria-hidden
-            className="absolute inset-0 bg-[radial-gradient(ellipse_at_58%_64%,#3a2a1a,#0a0606_70%)]"
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_58%_64%,transparent_25%,rgba(0,0,0,0.55)_75%,rgba(0,0,0,0.85)_100%)]"
           />
-          <picture>
-            <img
-              src="/fundo.jpeg"
-              alt="Aliança"
-              className="absolute inset-0 h-full w-full object-cover brightness-50"
-              style={{ objectPosition: `${RING_X} ${RING_Y}` }}
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
-              }}
-            />
-          </picture>
         </motion.div>
 
         <motion.div
