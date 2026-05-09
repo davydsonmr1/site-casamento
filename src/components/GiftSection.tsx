@@ -65,8 +65,12 @@ export function GiftSection() {
 
         <div className="mt-20 flex items-center justify-center gap-2 text-sm text-zinc-400">
           <ShieldCheck size={16} />
-          <span>Ambiente Criptografado TLS 1.3 &middot; Pagamento Direto aos Noivos</span>
+          <span> Pagamento Direto aos Noivos</span>
         </div>
+
+        <p className="mt-10 text-center text-xs uppercase tracking-[0.3em] text-zinc-400">
+          Desenvolvido por Davydson
+        </p>
       </div>
 
       <PixModal gift={selected} onClose={() => setSelected(null)} />

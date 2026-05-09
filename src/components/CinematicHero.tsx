@@ -21,8 +21,8 @@ export function CinematicHero() {
   // Tanto object-position quanto transform-origin usam o mesmo ponto:
   // assim a pedra fica fixa no viewport (em qualquer aspect ratio) e o
   // zoom acontece exatamente em cima dela.
-  const RING_X = "52%";
-  const RING_Y = "65%";
+  const RING_X = "58%";
+  const RING_Y = "64%";
 
   const scale = useTransform(progress, [0, 0.85], [1, 18]);
   const textOpacity = useTransform(progress, [0, 0.3], [1, 0]);
@@ -38,7 +38,7 @@ export function CinematicHero() {
           {/* Fallback caso /fundo.jpeg some, mantém clima cinematográfico. */}
           <div
             aria-hidden
-            className="absolute inset-0 bg-[radial-gradient(ellipse_at_52%_65%,#3a2a1a,#0a0606_70%)]"
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_58%_64%,#3a2a1a,#0a0606_70%)]"
           />
           <picture>
             <img
@@ -55,20 +55,17 @@ export function CinematicHero() {
 
         <motion.div
           style={{ opacity: textOpacity }}
-          className="relative z-10 space-y-4 px-4 text-center"
+          className="relative z-10 w-full max-w-[92vw] space-y-3 px-6 text-center sm:space-y-4"
         >
-          <h1 className="font-serif text-5xl italic tracking-tighter md:text-8xl">
-            Davydson &amp; Júlia
+          <h1 className="font-serif text-4xl italic leading-[0.95] tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl">
+            Júlia &amp; Davydson
           </h1>
-          <div className="mx-auto h-px w-40 bg-white/50" />
-          <p className="text-lg font-light uppercase tracking-[0.3em] md:text-2xl">
+          <div className="mx-auto h-px w-24 bg-white/50 sm:w-40" />
+          <p className="text-sm font-light uppercase tracking-[0.2em] sm:text-lg sm:tracking-[0.3em] md:text-2xl">
             11 de Julho de 2026
           </p>
-          <p className="text-sm font-light opacity-80 md:text-lg">
+          <p className="text-xs font-light opacity-80 sm:text-sm md:text-lg">
             Itamarati - Chácara Shekinah &mdash; MG
-          </p>
-          <p className="text-sm font-light opacity-40">
-            Coordenadas para o Google Maps: -21.42749715476446, -42.805411838939634
           </p>
         </motion.div>
 

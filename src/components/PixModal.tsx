@@ -129,7 +129,7 @@ export function PixModal({ gift, onClose }: Props) {
 
             <div className="mt-6 flex items-center justify-center gap-2 text-[11px] text-white/50">
               <ShieldCheck size={14} />
-              <span>Pagamento direto aos noivos &middot; TLS 1.3</span>
+              <span>Pagamento direto aos noivos</span>
             </div>
           </motion.div>
         </motion.div>
