@@ -1,13 +1,16 @@
 import type { NextConfig } from "next";
 
-// CSP sem 'unsafe-eval' — Next.js + Framer Motion não precisam de eval em prod.
-// Em dev, o Next injeta scripts inline para Fast Refresh; permitimos
-// 'unsafe-inline' apenas em desenvolvimento. Em produção, mantemos rígido.
-const isDev = process.env.NODE_ENV === "development";
-
+// Next.js (App Router + RSC streaming) injeta <script>self.__next_f.push(...)
+// inline para hidratar a página. Sem 'unsafe-inline' em script-src o navegador
+// bloqueia esses scripts em produção e a hidratação nunca completa — o que
+// quebra hooks tipo useScroll do Framer Motion (zoom no hero não roda).
+//
+// Para uma estática como esse site (sem auth, sem inputs refletidos, sem
+// upload), 'unsafe-inline' tem trade-off pequeno. Para tornar mais rígido,
+// dá pra implementar nonces via middleware no futuro.
 const csp = [
   "default-src 'self'",
-  `script-src 'self'${isDev ? " 'unsafe-inline'" : ""}`,
+  "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self' data:",
