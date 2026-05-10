@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { QrCode, ShieldCheck } from "lucide-react";
+import { MapPin, QrCode, ShieldCheck } from "lucide-react";
 import { GIFTS, formatBRL, type Gift } from "@/lib/gifts";
 import { PixModal } from "./PixModal";
 
@@ -67,6 +67,19 @@ export function GiftSection() {
           <ShieldCheck size={16} />
           <span> Pagamento Direto aos Noivos</span>
         </div>
+
+        <a
+          href="https://www.google.com/maps/dir/?api=1&destination=-21.427418942411286,-42.80509050167631"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group mt-6 flex items-center justify-center gap-2 text-sm text-zinc-600 transition hover:text-zinc-900"
+        >
+          <MapPin size={16} className="transition group-hover:scale-110" />
+          <span className="underline-offset-4 group-hover:underline">
+            Itamarati &mdash; Chácara Shekinah, MG
+          </span>
+          <span className="text-xs text-zinc-400">(traçar rota)</span>
+        </a>
 
         <p className="mt-10 text-center text-xs uppercase tracking-[0.3em] text-zinc-400">
           Desenvolvido por Davydson
