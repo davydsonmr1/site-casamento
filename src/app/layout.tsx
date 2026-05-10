@@ -13,11 +13,38 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
 });
 
+const SITE_URL = "https://juliaedavydson.vercel.app";
+const SITE_TITLE = "Davydson & Júlia — 11.07.2026";
+const SITE_DESCRIPTION =
+  "Casamento de Davydson & Júlia — Itamarati, 11 de Julho de 2026.";
+
 export const metadata: Metadata = {
-  title: "Davydson & Júlia — 11.07.2026",
-  description:
-    "Casamento de Davydson & Júlia — Itamarati, 11 de Julho de 2026.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   robots: { index: true, follow: false },
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    type: "website",
+    locale: "pt_BR",
+    url: "/",
+    siteName: "Júlia & Davydson",
+    images: [
+      {
+        url: "/fundo.jpeg",
+        width: 3596,
+        height: 6396,
+        alt: "Aliança de noivado",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ["/fundo.jpeg"],
+  },
 };
 
 export default function RootLayout({
