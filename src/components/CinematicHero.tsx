@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
@@ -33,18 +32,18 @@ export function CinematicHero() {
     <section ref={ref} className="relative h-[300vh]">
       <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden">
         <motion.div
-          style={{ scale, transformOrigin: `${RING_X} ${RING_Y}` }}
+          role="img"
+          aria-label="Mão dos noivos com a aliança"
+          style={{
+            scale,
+            transformOrigin: `${RING_X} ${RING_Y}`,
+            backgroundImage: "url('/fundo.jpeg')",
+            backgroundSize: "cover",
+            backgroundPosition: `${RING_X} ${RING_Y}`,
+            backgroundRepeat: "no-repeat",
+          }}
           className="absolute inset-0 z-0 will-change-transform"
         >
-          <Image
-            src="/fundo.jpeg"
-            alt="Aliança"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-            style={{ objectPosition: `${RING_X} ${RING_Y}` }}
-          />
           {/* Vinheta para legibilidade do texto sem queimar o centro da foto. */}
           <div
             aria-hidden
