@@ -60,7 +60,7 @@ export function CinematicHero() {
           </h1>
           <div className="mx-auto h-px w-24 bg-white/50 sm:w-40" />
           <p className="text-sm font-light uppercase tracking-[0.2em] sm:text-lg sm:tracking-[0.3em] md:text-2xl">
-            11 de Julho de 2026
+            12 de Julho de 2026
           </p>
           <p className="text-xs font-light opacity-80 sm:text-sm md:text-lg">
             Itamarati - Chácara Shekinah &mdash; MG

@@ -35,7 +35,7 @@ export function OurStory() {
             escolhemos, todos os dias, continuar escolhendo.
           </p>
           <p>
-            No dia <strong>11 de julho de 2026</strong>, em Itamarati, vamos
+            No dia <strong>12 de julho de 2026</strong>, em Itamarati, vamos
             celebrar não o fim de uma história, mas o início do capítulo mais
             bonito dela — cercados de quem faz parte da nossa caminhada.
           </p>
