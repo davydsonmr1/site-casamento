@@ -53,7 +53,7 @@ export function CinematicHero() {
 
         <motion.div
           style={{ opacity: textOpacity }}
-          className="relative z-10 w-full max-w-[92vw] space-y-3 px-6 text-center sm:space-y-4"
+          className="relative z-10 w-full max-w-[92vw] space-y-3 px-6 text-center text-white sm:space-y-4"
         >
           <h1 className="font-serif text-4xl italic leading-[0.95] tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl">
             Júlia &amp; Davydson
