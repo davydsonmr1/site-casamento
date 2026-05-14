@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 const SITE_URL = "https://juliaedavydson.vercel.app";
 const SITE_TITLE = "Davydson & Júlia — 12.07.2026";
 const SITE_DESCRIPTION =
-  "Casamento de Davydson & Júlia — Itamarati, 11 de Julho de 2026.";
+  "Casamento de Davydson & Júlia — Itamarati, 12 de Julho de 2026.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
