@@ -10,13 +10,13 @@ export function GiftSection() {
   const [selected, setSelected] = useState<Gift | null>(null);
 
   return (
-    <section className="min-h-screen bg-white px-6 py-24 text-zinc-900">
+    <section className="min-h-screen bg-white px-6 py-24 text-zinc-900 transition-colors dark:bg-black dark:text-zinc-100">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <h2 className="font-serif text-4xl italic md:text-5xl">
             Lista de Presentes
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-zinc-500">
+          <p className="mx-auto mt-4 max-w-xl text-zinc-500 dark:text-zinc-400">
             Sua presença é nosso maior presente. Mas se desejar nos presentear,
             escolha um item abaixo e contribua via PIX.
           </p>
@@ -28,9 +28,9 @@ export function GiftSection() {
               key={gift.id}
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className="overflow-hidden rounded-2xl border border-zinc-100 bg-zinc-50 shadow-sm"
+              className="overflow-hidden rounded-2xl border border-zinc-100 bg-zinc-50 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
             >
-              <div className="relative h-64 w-full overflow-hidden bg-zinc-200">
+              <div className="relative h-64 w-full overflow-hidden bg-zinc-200 dark:bg-zinc-800">
                 <picture>
                   <img
                     src={gift.image}
@@ -48,12 +48,14 @@ export function GiftSection() {
 
               <div className="p-6 text-center">
                 <h3 className="mb-1 text-lg font-medium">{gift.name}</h3>
-                <p className="mb-6 text-zinc-600">{formatBRL(gift.priceCents)}</p>
+                <p className="mb-6 text-zinc-600 dark:text-zinc-400">
+                  {formatBRL(gift.priceCents)}
+                </p>
 
                 <button
                   type="button"
                   onClick={() => setSelected(gift)}
-                  className="flex w-full items-center justify-center gap-2 rounded-full bg-black py-3 text-white transition-all hover:bg-zinc-800 active:scale-95"
+                  className="flex w-full items-center justify-center gap-2 rounded-full bg-black py-3 text-white transition-all hover:bg-zinc-800 active:scale-95 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
                 >
                   <QrCode size={18} />
                   Presentear via PIX
@@ -63,7 +65,7 @@ export function GiftSection() {
           ))}
         </div>
 
-        <div className="mt-20 flex items-center justify-center gap-2 text-sm text-zinc-400">
+        <div className="mt-20 flex items-center justify-center gap-2 text-sm text-zinc-400 dark:text-zinc-500">
           <ShieldCheck size={16} />
           <span> Pagamento Direto aos Noivos</span>
         </div>
@@ -72,16 +74,18 @@ export function GiftSection() {
           href="https://www.google.com/maps/dir/?api=1&destination=-21.427418942411286,-42.80509050167631"
           target="_blank"
           rel="noopener noreferrer"
-          className="group mt-6 flex items-center justify-center gap-2 text-sm text-zinc-600 transition hover:text-zinc-900"
+          className="group mt-6 flex items-center justify-center gap-2 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
         >
           <MapPin size={16} className="transition group-hover:scale-110" />
           <span className="underline-offset-4 group-hover:underline">
             Itamarati &mdash; Chácara Shekinah, MG
           </span>
-          <span className="text-xs text-zinc-400">(traçar rota)</span>
+          <span className="text-xs text-zinc-400 dark:text-zinc-500">
+            (traçar rota)
+          </span>
         </a>
 
-        <p className="mt-10 text-center text-xs uppercase tracking-[0.3em] text-zinc-400">
+        <p className="mt-10 text-center text-xs uppercase tracking-[0.3em] text-zinc-400 dark:text-zinc-500">
           Desenvolvido por Davydson
         </p>
       </div>
