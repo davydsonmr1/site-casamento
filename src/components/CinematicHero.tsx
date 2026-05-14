@@ -27,6 +27,7 @@ export function CinematicHero() {
   const scale = useTransform(progress, [0, 0.85], [1, 18]);
   const textOpacity = useTransform(progress, [0, 0.3], [1, 0]);
   const fadeToWhite = useTransform(progress, [0.88, 1], [0, 1]);
+  const arrowOpacity = useTransform(scrollYProgress, [0, 0.02], [1, 0]);
 
   return (
     <section ref={ref} className="relative h-[300vh]">
@@ -72,6 +73,36 @@ export function CinematicHero() {
           style={{ opacity: fadeToWhite, pointerEvents: "none" }}
           className="absolute inset-0 bg-white"
         />
+
+        <motion.div
+          aria-hidden
+          style={{ opacity: arrowOpacity }}
+          className="pointer-events-none absolute bottom-8 left-1/2 z-20 -translate-x-1/2 sm:bottom-12"
+        >
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+            className="flex flex-col items-center gap-2 text-white/80"
+          >
+            <span className="text-[10px] font-light uppercase tracking-[0.3em] sm:text-xs">
+              Role para baixo
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M12 5v14" />
+              <path d="m19 12-7 7-7-7" />
+            </svg>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
