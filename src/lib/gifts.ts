@@ -42,7 +42,7 @@ export const GIFTS: Gift[] = [
   {
     id: "ferramentas",
     name: "Maleta de Ferramentas pro Noivo",
-    priceCents: 25000,
+    priceCents: 10000,
     image: "/maleta.webp",
     purchaseLink: "https://www.mercadolivre.com.br/kit-chaves-jogo-ferramentas-maleta-completa-200-pecas-servicos-gerais-bits-fenda-philips-allen/p/MLB51762370#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=12&type=product&tracking_id=4b79b01b-13bf-4935-945b-edbbdf9264a1&wid=MLB5483910906&sid=search",
   },
@@ -73,7 +73,7 @@ export const GIFTS: Gift[] = [
   {
     id: "pipoca",
     name: "Pipoqueira para os noivos assistirem filmes juntos",
-    priceCents: 20000,
+    priceCents: 15000,
     image: "/pipoca.jpg",
     purchaseLink: "https://www.amazon.com.br/Pipoqueira-Brit%C3%A2nia-Pop-Time-IMPORTADOS/dp/B076BB2NCN?pd_rd_w=mkKx1&content-id=amzn1.sym.550666bb-9d24-483d-bc9e-4a297db376ce&pf_rd_p=550666bb-9d24-483d-bc9e-4a297db376ce&pf_rd_r=TP9E0NTAM6JQFW2ZEGV6&pd_rd_wg=IUDzb&pd_rd_r=8d578ba2-6a14-4dcd-ad80-96ddf702773d&pd_rd_i=B076BB2NCN&th=1&linkCode=sl2&tag=thiago02ec-20&linkId=4ef83528281b24ab6c5e8b3423804cfb&ref_=as_li_ss_tl",
   },
