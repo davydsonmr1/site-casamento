@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, Copy, ShieldCheck, X } from "lucide-react";
-import { QRCodeSVG } from "qrcode.react";
 import { PIX_KEY, PIX_RECIPIENT } from "@/lib/pix";
 import { formatBRL, type Gift } from "@/lib/gifts";
 
@@ -83,18 +82,6 @@ export function PixModal({ gift, onClose }: Props) {
               <p className="mt-1 text-lg font-light text-white/80">
                 {formatBRL(gift.priceCents)}
               </p>
-            </div>
-
-            <div className="mt-6 flex justify-center">
-              <div className="rounded-2xl bg-white p-4 shadow-inner">
-                <QRCodeSVG
-                  value={PIX_KEY}
-                  size={180}
-                  level="M"
-                  bgColor="#ffffff"
-                  fgColor="#0a0a0a"
-                />
-              </div>
             </div>
 
             <div className="mt-6">
