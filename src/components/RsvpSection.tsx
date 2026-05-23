@@ -20,7 +20,7 @@ export function RsvpSection() {
           Confirme sua Presença
         </p>
         <h2 className="mb-6 font-serif text-3xl italic leading-tight md:text-5xl">
-          Preencha o formulário até dia 15 de junho
+          Preencha o formulário até dia 06 de agosto
         </h2>
         <p className="mx-auto mb-10 max-w-lg text-base leading-relaxed text-zinc-600 md:text-lg dark:text-zinc-400">
           Sua confirmação é muito importante para a organização do nosso grande
@@ -39,7 +39,7 @@ export function RsvpSection() {
         </a>
 
         <p className="mt-6 text-xs text-zinc-500 dark:text-zinc-500">
-          Prazo final: 15 de junho de 2026
+          Prazo final: 06 de agosto de 2026
         </p>
       </motion.div>
     </section>
