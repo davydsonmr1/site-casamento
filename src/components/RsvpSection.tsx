@@ -1,12 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Calendar, ExternalLink } from "lucide-react";
-
-const FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSdIm0uqyuMjM4rH3hykfLz2_3QIIdGMgDL65sQP4hMxCLvmqQ/viewform?usp=preview";
+import { Calendar } from "lucide-react";
+import { RsvpClosedModal } from "./RsvpClosedModal";
 
 export function RsvpSection() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <section className="bg-zinc-50 px-6 py-24 text-zinc-900 transition-colors md:py-32 dark:bg-zinc-900 dark:text-zinc-100">
       <motion.div
@@ -27,21 +28,21 @@ export function RsvpSection() {
           dia. Reserve um minutinho e preencha o formulário abaixo.
         </p>
 
-        <a
-          href={FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          type="button"
+          onClick={() => setModalOpen(true)}
           className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-8 py-4 text-sm font-medium uppercase tracking-[0.2em] text-white shadow-lg transition-all hover:scale-105 hover:bg-zinc-800 active:scale-95 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
         >
           <Calendar size={18} />
           Confirmar Presença
-          <ExternalLink size={16} className="opacity-70" />
-        </a>
+        </button>
 
         <p className="mt-6 text-xs text-zinc-500 dark:text-zinc-500">
           Prazo final: 01 de agosto de 2026
         </p>
       </motion.div>
+
+      <RsvpClosedModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }
