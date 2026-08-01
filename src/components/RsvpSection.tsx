@@ -27,7 +27,7 @@ export function RsvpSection() {
           dia. Reserve um minutinho e preencha o formulário abaixo.
         </p>
 
-        <a
+        {/* <a
           href={FORM_URL}
           target="_blank"
           rel="noopener noreferrer"
@@ -36,7 +36,7 @@ export function RsvpSection() {
           <Calendar size={18} />
           Confirmar Presença
           <ExternalLink size={16} className="opacity-70" />
-        </a>
+        </a> */}
 
         <p className="mt-6 text-xs text-zinc-500 dark:text-zinc-500">
           Prazo final: 01 de agosto de 2026
